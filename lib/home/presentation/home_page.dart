@@ -39,8 +39,11 @@ class HomePage extends ConsumerWidget {
                                 flex: 2,
                                 child: GridView.builder(
                                   gridDelegate:
-                                      SliverGridDelegateWithFixedCrossAxisCount(
-                                          crossAxisCount: 4),
+                                      const SliverGridDelegateWithFixedCrossAxisCount(
+                                    crossAxisCount: 4,
+                                    mainAxisSpacing: 2,
+                                    crossAxisSpacing: 2,
+                                  ),
                                   itemCount: 4,
                                   itemBuilder: (context, index) => Container(
                                     color: Colors.greenAccent,
