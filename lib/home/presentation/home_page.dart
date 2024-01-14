@@ -14,71 +14,10 @@ class HomePage extends ConsumerWidget {
       key: ref.watch(menuIconControllerProvider).scaffoldKey,
       drawer: const AppDrawer(),
       body: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          if (context.isDesktop) const Expanded(flex: 2, child: AppDrawer()),
-          Expanded(
-            flex: 9,
-            child: Column(
-              children: [
-                const Header(),
-                const SizedBox(height: 2),
-                Expanded(
-                    child: Container(
-                  color: Colors.amber,
-                  child: Row(
-                    children: [
-                      // main body
-                      Expanded(
-                        flex: 10,
-                        child: Container(
-                          margin: const EdgeInsets.only(left: 4),
-                          color: Colors.grey[200],
-                          child: Column(
-                            children: [
-                              Expanded(
-                                flex: 2,
-                                child: GridView.builder(
-                                  gridDelegate:
-                                      const SliverGridDelegateWithFixedCrossAxisCount(
-                                    crossAxisCount: 4,
-                                    mainAxisSpacing: 2,
-                                    crossAxisSpacing: 2,
-                                  ),
-                                  itemCount: 4,
-                                  itemBuilder: (context, index) => Container(
-                                    color: Colors.greenAccent,
-                                  ),
-                                ),
-                              ),
-                              Expanded(
-                                flex: 7,
-                                child: Column(
-                                  children: [
-                                    Container(
-                                      color: Colors.blueGrey,
-                                    )
-                                  ],
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-
-                      // side
-                      Expanded(
-                        flex: 3,
-                        child: Container(
-                          margin: const EdgeInsets.only(left: 4, right: 4),
-                          color: Colors.grey,
-                        ),
-                      ),
-                    ],
-                  ),
-                )),
-              ],
-            ),
-          ),
+          Expanded(child: AppDrawer()),
+          Expanded(flex: 5, child: DashboradScreen()),
         ],
       ),
     );
