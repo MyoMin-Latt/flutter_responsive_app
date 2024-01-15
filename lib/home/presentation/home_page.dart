@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_responsive_app/core/core_extension.dart';
 import 'package:flutter_responsive_app/home/application/menu_icon_controller.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -13,7 +12,7 @@ class HomePage extends ConsumerWidget {
     return Scaffold(
       key: ref.watch(menuIconControllerProvider).scaffoldKey,
       drawer: const AppDrawer(),
-      body: Row(
+      body: const Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Expanded(child: AppDrawer()),
