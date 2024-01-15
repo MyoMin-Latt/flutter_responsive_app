@@ -11,23 +11,22 @@ class DashboradScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: SingleChildScrollView(
-        padding: EdgeInsets.all(defaultPadding),
+        padding: const EdgeInsets.all(defaultPadding),
         child: Column(
           children: [
-            Header(),
+            const Header(),
+            const SizedBox(height: defaultPadding),
             Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Expanded(
                   flex: 5,
-                  child: Container(
-                    color: Colors.white,
-                  ),
+                  child: Container(height: 500, color: Colors.white),
                 ),
-                Expanded(
+                const SizedBox(width: defaultPadding),
+                const Expanded(
                   flex: 2,
-                  child: Container(
-                    color: Colors.blue,
-                  ),
+                  child: StorageDetails(),
                 ),
               ],
             )
