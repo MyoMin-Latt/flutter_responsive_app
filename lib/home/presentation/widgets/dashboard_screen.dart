@@ -21,7 +21,7 @@ class DashboradScreen extends StatelessWidget {
               children: [
                 Expanded(
                   flex: 5,
-                  child: Container(height: 500, color: Colors.white),
+                  child: MyFiles(),
                 ),
                 const SizedBox(width: defaultPadding),
                 const Expanded(
